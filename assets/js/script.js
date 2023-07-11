@@ -46,4 +46,11 @@ $(function () {
       $(this).removeClass('past present').addClass('future'); 
     }
   });
+  $('.time-block').each(function () {
+    var timeBlockId = $(this).attr('id');
+    var savedDescription = localStorage.getItem(timeBlockId);
+    if (savedDescription) {
+      $(this).find('.description').val(savedDescription);
+    }
+  });
 });

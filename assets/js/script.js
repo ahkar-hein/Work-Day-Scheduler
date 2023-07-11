@@ -20,4 +20,18 @@ $(function () {
   // attribute of each time-block be used to do this?
   //
   // TODO: Add code to display the current date in the header of the page.
+  // Pseudocode
+  // current day display at the top of the calendar
+  // present timeblock for standard hour(HTML)
+  // event listener for savebtn
+  // apply style for past, present and future
+  // save localstorage
+  // retrieve from localstorage
+  var currentDate = dayjs().format('dddd, MMMM D, YYYY'); 
+  $('#currentDay').text(currentDate);
+  $('.saveBtn').on('click', function () {
+    var description = $(this).siblings('.description').val().trim(); 
+    var timeBlockId = $(this).parent().attr('id'); 
+    localStorage.setItem(timeBlockId, description);
+  });
 });

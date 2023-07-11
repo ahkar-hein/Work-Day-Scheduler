@@ -14,7 +14,7 @@
 
 ## Usage
 ### Website Link
-* []
+* [https://ahkar-hein.github.io/Work-Day-Scheduler/]
 
 ## Mock-Up
 
